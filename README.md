@@ -18,7 +18,7 @@
 
 ## *Description*
 
-This full-stack web app uses the MERN stack to allow a user to view, sort and filter through a list of users in a directory.
+This web app uses the MERN stack to allow a user to view, sort and filter through a list of users in a directory.
 
 ## *Installation*
 
