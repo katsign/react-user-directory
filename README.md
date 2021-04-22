@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+<div align="center">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React User Directory 👩‍💻
+![GitHub license](https://img.shields.io/badge/License-MIT-green)
 
-## Available Scripts
+#### 📍 [View Deployment on Heroku](path) 📍
 
-In the project directory, you can run:
+### View, sort and filter through a list of users.
+</div>
 
-### `yarn start`
+## *Table of Contents*
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Screenshots](#screenshots)
+- [Contact](#contact)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## *Description*
 
-### `yarn test`
+This full-stack web app uses the MERN stack to allow a user to view, sort and filter through a list of users in a directory.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## *Installation*
 
-### `yarn build`
+### Local Clone
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Navigate into the repository folder on your local machine and open the built-in terminal. You will need Node.js installed to run this application.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- On the command line, type `npm i` to pull the app's dependencies to your local.
+- Type `npm start` to run the application locally.
+- Navigate to `http://localhost:3000` to view the development server.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## *Usage*
 
-### `yarn eject`
+- Step
+- Step
+- Step
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## *Screenshots*
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Placeholder  |  Placeholder
+:-------------------------:|:-------------------------:
+![Demo](./public/img/)  |  ![Demo](./public/img/)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## *Contact*
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+🔗 Links in Bio @[katsign](https://github.com/katsign)
 
-## Learn More
+![Email Badge](https://img.shields.io/badge/Email%20Me-mailtokatsign%40gmail.com-d8bfd8)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+This project is MIT licensed. &copy; 2021
