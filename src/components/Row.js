@@ -8,7 +8,7 @@ export default function Row({
   }) {
     return (
       <>
-        <tr className='mb-5'>
+        <tr>
           <td>
             <img alt={firstName} src={image} />
           </td>
@@ -18,8 +18,8 @@ export default function Row({
           <td>
             <strong>{lastName}</strong>
           </td>
-          <td>{phone}</td>
-          <td>{email}</td>
+          <td><small>{phone}</small></td>
+          <td><small>{email}</small></td>
           <td>{location}</td>
         </tr>
       </>
