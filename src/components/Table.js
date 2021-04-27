@@ -8,20 +8,22 @@ export default class Table extends Component {
     location: '',
   };
 
+  // CALL API + SET STATE when component mounts to DOM...
   componentDidMount() {
     API.getUsers().then(({ data }) => {
       this.setState({ employees: data.results });
     });
   }
 
-  handleInputChange = event => {
+  handleInputChange = (event) => {
     const value = event.target.value;
     const name = event.target.name;
     this.setState({
-      [name]: value
+      [name]: value,
     });
   };
 
+  // SORT BY NAME
   sortByName = () => {
     const sorted = this.state.employees.sort((a, b) =>
       a.name.last > b.name.last ? 1 : b.name.last > a.name.last ? -1 : 0
@@ -29,24 +31,25 @@ export default class Table extends Component {
     this.setState({ employees: sorted });
   };
 
-    filterLocation = (location) => (employee) => {
-      const queryLocation = employee.location.state;
-      return queryLocation.toLowerCase() === location.toLowerCase();
-    };
-  
-    renderFiltered = (event) => {
-      event.preventDefault();
-      const input = event.target.children[0].children[1].value;
-      const matches = this.state.employees.filter(this.filterLocation(input));
-      this.setState({ employees: matches, location: '' });
-    };
-  
-    clearFilter = (event) => {
-      event.preventDefault();
-      API.getUsers().then(({ data }) => {
-        this.setState({ employees: data.results });
-      });
-    };
+  // FILTER BY STATE (LOCATION)
+  filterLocation = (location) => (employee) => {
+    const queryLocation = employee.location.state;
+    return queryLocation.toLowerCase() === location.toLowerCase();
+  };
+
+  renderFiltered = (event) => {
+    event.preventDefault();
+    const input = event.target.children[0].children[1].value;
+    const matches = this.state.employees.filter(this.filterLocation(input));
+    this.setState({ employees: matches, location: '' });
+  };
+
+  clearFilter = (event) => {
+    event.preventDefault();
+    API.getUsers().then(({ data }) => {
+      this.setState({ employees: data.results });
+    });
+  };
 
   render() {
     return (
@@ -54,10 +57,7 @@ export default class Table extends Component {
         <div className="row">
           <div className="col-sm-12">
             <div className="row">
-              <button
-                className="btn"
-                onClick={this.sortByName}
-              >
+              <button className="btn" onClick={this.sortByName}>
                 Sort A-Z
               </button>
             </div>
@@ -79,10 +79,7 @@ export default class Table extends Component {
                   <button className="btn" type="submit">
                     Filter
                   </button>
-                  <button
-                    className="btn"
-                    onClick={this.clearFilter}
-                  >
+                  <button className="btn" onClick={this.clearFilter}>
                     Clear Filter
                   </button>
                 </div>
