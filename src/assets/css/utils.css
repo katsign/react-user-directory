@@ -1,0 +1,43 @@
+.navbar-light {
+background: thistle;
+}
+
+a, a > small {
+  color: white!important;
+}
+
+.btn-primary {
+  color: white;
+  background-color: thistle;
+  border-color: thistle;
+}
+.btn-primary:hover {
+  color: white;
+  background-color: #d2b5d2;
+  border-color: #d2b5d2;
+}
+.btn-primary:focus,
+.btn-primary.focus {
+  color: white;
+  background-color: #d2b5d2;
+  border-color: #d2b5d2;
+  box-shadow: 0 0 0 0.2rem rgba(189, 168, 190, 0.5);
+}
+.btn-primary.disabled,
+.btn-primary:disabled {
+  color: white;
+  background-color: thistle;
+  border-color: thistle;
+}
+.btn-primary:not(:disabled):not(.disabled):active,
+.btn-primary:not(:disabled):not(.disabled).active,
+.show > .btn-primary.dropdown-toggle {
+  color: white;
+  background-color: #d2b5d2;
+  border-color: #d2b5d2;
+}
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.btn-primary:not(:disabled):not(.disabled).active:focus,
+.show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(189, 168, 190, 0.5);
+}
