@@ -91,7 +91,7 @@ export default class Table extends Component {
             <thead>
               <tr>
                 <th>
-                  <span class="material-icons">emoji_emotions</span>
+                  <span className="material-icons">emoji_emotions</span>
                 </th>
                 <th>
                   <strong>First</strong>
