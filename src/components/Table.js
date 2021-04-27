@@ -54,76 +54,78 @@ export default class Table extends Component {
 
   render() {
     return (
-      <div className="container tab scroll">
-        <div className="d-flex flex-row align-items-center justify-content-between mb-3">
-          <button className="btn btn-primary" onClick={this.sortByName}>
-            Sort A-Z
-          </button>
-          <form className="form form-inline" onSubmit={this.renderFiltered}>
-            <div className="form-group">
-              <label className="mr-2">Filter by State</label>
-              <input
-                type="text"
-                className="form-control mr-2"
-                placeholder="California"
-                aria-label="location"
-                aria-describedby="filterBtn"
-                name="location"
-                id="locationInput"
-                onChange={this.handleInputChange}
-                value={this.state.location}
-              />
-              <button
-                className="btn btn-primary mr-2"
-                type="submit"
-                id="filterBtn"
-              >
-                Filter
-              </button>
-              <button className="btn btn-primary" onClick={this.clearFilter}>
-                Clear Filter
-              </button>
-            </div>
-          </form>
-        </div>
-        <div className="row">
-          <table className="table mb-0">
-            <thead>
-              <tr>
-                <th>
-                  <span className="material-icons">emoji_emotions</span>
-                </th>
-                <th>
-                  <strong>First</strong>
-                </th>
-                <th>
-                  <strong>Last</strong>
-                </th>
-                <th>
-                  <strong>Phone</strong>
-                </th>
-                <th>
-                  <strong>Email</strong>
-                </th>
-                <th>
-                  <strong>Location</strong>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {this.state.employees.map((employee, i) => (
-                <Row
-                  key={i}
-                  firstName={employee.name.first}
-                  lastName={employee.name.last}
-                  image={employee.picture.medium}
-                  phone={employee.phone}
-                  email={employee.email}
-                  location={employee.location.state}
+      <div className="container">
+        <div className="tab scroll">
+          <div className="d-flex flex-row align-items-center justify-content-between mb-3">
+            <button className="btn btn-primary" onClick={this.sortByName}>
+              Sort A-Z
+            </button>
+            <form className="form form-inline" onSubmit={this.renderFiltered}>
+              <div className="form-group">
+                <label className="mr-2">Filter by State</label>
+                <input
+                  type="text"
+                  className="form-control mr-2"
+                  placeholder="California"
+                  aria-label="location"
+                  aria-describedby="filterBtn"
+                  name="location"
+                  id="locationInput"
+                  onChange={this.handleInputChange}
+                  value={this.state.location}
                 />
-              ))}
-            </tbody>
-          </table>
+                <button
+                  className="btn btn-primary mr-2"
+                  type="submit"
+                  id="filterBtn"
+                >
+                  Filter
+                </button>
+                <button className="btn btn-primary" onClick={this.clearFilter}>
+                  Clear Filter
+                </button>
+              </div>
+            </form>
+          </div>
+          <div className="row">
+            <table className="table mb-0">
+              <thead>
+                <tr>
+                  <th>
+                    <span className="material-icons">emoji_emotions</span>
+                  </th>
+                  <th>
+                    <strong>First</strong>
+                  </th>
+                  <th>
+                    <strong>Last</strong>
+                  </th>
+                  <th>
+                    <strong>Phone</strong>
+                  </th>
+                  <th>
+                    <strong>Email</strong>
+                  </th>
+                  <th>
+                    <strong>Location</strong>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {this.state.employees.map((employee, i) => (
+                  <Row
+                    key={i}
+                    firstName={employee.name.first}
+                    lastName={employee.name.last}
+                    image={employee.picture.medium}
+                    phone={employee.phone}
+                    email={employee.email}
+                    location={employee.location.state}
+                  />
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     );
