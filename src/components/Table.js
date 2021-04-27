@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import API from '../utils/API';
+import '../assets/css/utils.css';
 import Row from './Row';
 
 export default class Table extends Component {
@@ -53,21 +54,17 @@ export default class Table extends Component {
 
   render() {
     return (
-      <div className="container">
-        <div className="row">
-          <div className="col-sm-12">
-            <div className="row">
-              <button className="btn" onClick={this.sortByName}>
+      <div className="container tab scroll">
+        <div className="d-flex flex-row align-items-center justify-content-between mb-3">
+              <button className="btn btn-primary" onClick={this.sortByName}>
                 Sort A-Z
               </button>
-            </div>
-            <div className="row">
               <form className="form form-inline" onSubmit={this.renderFiltered}>
                 <div className="form-group">
-                  <label>Filter by State</label>
+                  <label className="mr-2">Filter by State</label>
                   <input
                     type="text"
-                    className="form-control"
+                    className="form-control mr-2"
                     placeholder="California"
                     aria-label="location"
                     aria-describedby="filterBtn"
@@ -76,27 +73,25 @@ export default class Table extends Component {
                     onChange={this.handleInputChange}
                     value={this.state.location}
                   />
-                  <button className="btn" type="submit">
+                  <button className="btn btn-primary mr-2" type="submit" id="filterBtn">
                     Filter
                   </button>
-                  <button className="btn" onClick={this.clearFilter}>
+                  <button className="btn btn-primary" onClick={this.clearFilter}>
                     Clear Filter
                   </button>
                 </div>
               </form>
-            </div>
-          </div>
         </div>
         <div className="row">
-          <table>
+          <table className="table mb-0">
             <thead>
               <tr>
-                <th></th>
-                <th>First</th>
-                <th>Last</th>
-                <th>Phone</th>
-                <th>Email</th>
-                <th>Location</th>
+                <th><i></i></th>
+                <th><strong>First</strong></th>
+                <th><strong>Last</strong></th>
+                <th><strong>Phone</strong></th>
+                <th><strong>Email</strong></th>
+                <th><strong>Location</strong></th>
               </tr>
             </thead>
             <tbody>
