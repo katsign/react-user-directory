@@ -1,9 +1,10 @@
 import Table from './components/Table';
-import './assets/index.css';
+import Nav from './components/Nav';
 
 function App() {
   return (
     <div>
+      <Nav />
       <Table />
     </div>
   );
